@@ -19,6 +19,8 @@ public class Tienda {
 		super();
 		this.nit = nit;
 		this.nombre = nombre;
+		//Implementaci贸n relaci贸n de composici贸n.
+		//Se crea un arreglo unidimenisonal cuyos elementos son objetos de clase Producto 
 		this.catalogoProducto =new Producto[numeroProducto];
 	}
 	/**
@@ -46,23 +48,21 @@ public class Tienda {
 		this.nombre = nombre;
 	}
 	/**
-	 * Funci髇 para agregar productos a la lista de productos arreglo estatico 
+	 * Funci贸n para agregar productos a la lista de productos arreglo estatico 
 	 * @param producto instancia objeto de la clase Producto
 	 * @return
 	 */
 	public boolean agregarProducto(Producto producto) {
-		boolean estado=false;
 		for (int i = 0; i < catalogoProducto.length; i++) {
 			if(catalogoProducto[i]==null) {
 				catalogoProducto[i]=producto;
-				estado=true;
-				break;
+				return true;
 			}
 		}
-		return estado;
+		return false;
 	}
 	/**
-	 * Funci髇 para buscar un producto especifico en el catalogo de productos
+	 * Funci贸n para buscar un producto especifico en el catalogo de productos
 	 * @param codigo
 	 * @return
 	 */
@@ -77,7 +77,7 @@ public class Tienda {
 		return p;
 	}
 	/**
-	 * Funci髇 para mostrar el catalogo de producto segun el tipo de producto
+	 * Funci贸n para mostrar el catalogo de producto segun el tipo de producto
 	 * @param tipo entreo identifica el tipo de prducto 1 perecedero 2 no perecedero
 	 */
 	public void mostrarCatalogo(int tipo) {
@@ -90,7 +90,7 @@ public class Tienda {
 		}
 	}
 	/**
-	 * Funci髇 para mostrra el catalfo de productos teniendo encuenta el rango de precio
+	 * Funci贸n para mostrar el catalfo de productos teniendo encuenta el rango de precio
 	 * @param rangoI rango inicial de precio
 	 * @param rangoF rango final de precio 
 	 */

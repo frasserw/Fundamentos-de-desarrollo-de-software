@@ -42,10 +42,7 @@ public class Tipo {
 	 */
 	@Override
 	public String toString() {
-		if(id == 1)
-			return "perecedero";
-		else
-			return "no perecedero";
+		(id == 1 ? return "perecedero" : return "no perecedero");
 	}
 	
 	

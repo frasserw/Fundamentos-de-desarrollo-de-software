@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author Willian
- *
- */
-module abstracta {
-}
